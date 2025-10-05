@@ -623,7 +623,7 @@ param2->packets++;
 } while ( send(param2->socket, &packet, sizeof(packet), 0) );
 return 0;
 }
-const char *banner_name = "\e[1;37m(\e[0m\e[0;31mcerberus\e[0m\e[1;37m)\e[0m-\e[1;37mby\e[0m-\e[1;37m(\e[0m\e[0;31mbloodbath\e[0m\e[1;37m)\e[0m";
+const char *banner_name = "\e[1;37m(\e[0m\e[0;31mcerberus\e[0m\e[1;37m)\e[0m-\e[1;37mby\e[0m-\e[1;37m(\e[0m\e[0;31mGage\e[0m\e[1;37m)\e[0m";
 static void
 usage(const char *argv0) {
 printf("%s \n", banner_name);
