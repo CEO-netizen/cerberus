@@ -643,7 +643,8 @@ printf(" -p destination port range [start,end]  \e[1;37m(\e[0m\e[0;31mrandom\e[0
 printf(" -q source port range [start,end]       \e[1;37m(\e[0m\e[0;31mrandom\e[0m\e[1;37m)\e[0m\n");
 printf(" -t timeout                         \e[1;37m(\e[0m\e[0;31mno default\e[0m\e[1;37m)\e[0m\n");
 printf(" -w window size [ 1-65535 ]             \e[1;37m(\e[0m\e[0;31mrandom\e[0m\e[1;37m)\e[0m\n");
-printf("\e[1mUsage\e[0m: %s -4 -6 [-U -I -T -B -h -d -s -p -q -t]\n", argv0);
+printf(" -H help                             \e[1;37m(\e[0m\e[0;31mdisplay this help\e[0m\e[1;37m)\e[0m\n");
+printf("\e[1mUsage\e[0m: %s -4 -6 [-U -I -T -B -H -h -d -s -p -q -t -w]\n", argv0);
 exit(-1);
 }
 int
@@ -657,7 +658,7 @@ thread_data_array[0].window_size = 0;
 for (i = TCP_FIN; i <= ICMP_ECHO_G; i*=2) {
 thread_data_array[i].a_flags = 0;
 }
-while ( (n = getopt(argc, argv, "46T:B:IRUh:d:s:t:p:q:w:")) != -1) {
+while ( (n = getopt(argc, argv, "46T:B:IRUHh:d:s:t:p:q:w:")) != -1) {
 char *p;
 unsigned int bombsize = 0;
 unsigned int datasize = 0;
@@ -831,6 +832,9 @@ window_size = atoi(optarg);
 if(window_size > 65535)
 window_size = 65535;
 thread_data_array[0].window_size = window_size;
+break;
+case 'H':
+usage(argv[0]);
 break;
 default:
 usage(argv[0]);

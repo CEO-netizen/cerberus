@@ -25,7 +25,7 @@ gcc src/main.c -o cerberus -lpthread
 
 ## Usage
 
-Run the tool with the appropriate flags. Use `-h` for help.
+Run the tool with the appropriate flags. Use `-H` for help.
 
 Example for a SYN flood on IPv4:
 
@@ -52,3 +52,7 @@ See LICENSE file for details.
 ## Disclaimer
 
 The authors are not responsible for any misuse of this tool.
+
+## Advanced usage
+
+see **docs/ADVANCED.md** for full coverage over protocols and flag usage.
