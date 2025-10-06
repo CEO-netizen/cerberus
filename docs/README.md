@@ -42,7 +42,7 @@ For IPv6:
 See the built-in help for all options:
 
 ```bash
-./cerberus -h
+./cerberus -H
 ```
 
 ## License
