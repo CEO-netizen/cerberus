@@ -625,7 +625,7 @@ void *send_bomb(void *arg) {
 }
 const char *banner_name =
     "\e[1;37m(\e[0m\e[0;31mcerberus\e[0m\e[1;37m)\e[0m-\e[1;37mby\e[0m-\e[1;"
-    "37m(\e[0m\e[0;31mGage\e[0m\e[1;37m)\e[0m";
+    "37m(\e[0m\e[0;31mZero\e[0m\e[1;37m)\e[0m";
 static void usage(const char *argv0) {
   printf("%s \n", banner_name);
   printf(" -U UDP    attack                   \e[1;37m(\e[0m\e[0;31mno "
